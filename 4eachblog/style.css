@@ -1,0 +1,97 @@
+@utf-8;
+
+
+/*header*/
+header img{
+	width: 25%;
+}
+
+.menu {
+	overflow: auto;
+	background: black;
+	list-style: none;
+	color: white;
+}
+
+.menu li {
+	float: left;
+	padding: 10px 0;
+	margin: 0 40px;
+}
+
+/*main-left*/
+.left {
+	width: 65%;
+	float: left;
+}
+
+.article h1 {
+	margin-bottom: 10px;
+	border-left: 4px solid black;
+	border-bottom: 2px solid black;
+}
+
+.clock {
+	margin-top: 0;
+}
+
+.clock img {
+	width: 18px;
+	padding-right: 4px;
+}
+
+div > img {
+	width: 100%;
+}
+
+
+/*contents*/
+.contents {
+	padding-top: 30px;
+	padding-left: 35px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	overflow: auto;
+	background: lightgray;
+}
+
+.contents div {
+	text-align: center;
+	float: left;
+	margin-left: 10px;
+}
+
+.contents img {
+	width: 200px;
+}
+
+.contents p {
+	margin-top: 0;
+}
+
+
+
+/*main-right*/
+.right {
+	width: 30%;
+	float: right;
+}
+
+.right div {
+	margin-bottom: 40px;
+}
+
+.right h2 {
+	margin-bottom: 5px;
+	border-bottom: 3px dotted black;
+} 
+
+
+/*footer*/
+footer {
+	clear: both;
+	background: black;
+	color: white;
+	text-align: center;
+	padding: 15px 0;
+}

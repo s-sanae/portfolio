@@ -1,0 +1,437 @@
+body {
+	font-family: 'Bitter', serif;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/*header*/
+#header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: center;
+	background: #fff;
+	z-index: 999;
+}
+
+.cart {
+	width: 35px;
+	position: fixed;
+	top: 35px;
+	right: 5%;
+}
+
+
+
+/*menu show,hide*/
+#nav {
+	position: relative;
+	text-align: center;
+}
+
+.nav_show {
+	display: none;
+}
+
+#nav_open {
+	display: inline-block;
+	margin: 0 40px;
+	width: 30px;
+	height: 25px;
+	vertical-align: middle;
+	position: fixed;
+	top: 40px;
+	left: 30px;
+}
+
+/*menu icon*/
+#nav_open span, #nav_open span:after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 29px;
+	border-radius: 5px;
+	background: rgb(53, 51, 43);
+}
+
+#nav_open span:after {
+	bottom: -18px;
+}
+
+/*nav close*/
+#nav_close {
+	display: none;
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	opacity: 0;
+	z-index: 999;
+}
+
+/*menu*/
+
+menu {
+	margin: 0;
+	padding: 20px 50px;
+	height: 65%;
+	width: 100%;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	font-size: 180%;
+	letter-spacing: 4px;
+	background: rgba(124, 79, 39, .5);
+	transition: .5s ease-in-out;/*滑らかに表示*/
+	-webkit-transform: translateY(-105%);
+	transform: translateY(-105%);/*上に隠しておく*/
+	text-align: left;
+	opacity: 0;
+}
+
+menu li {
+	list-style: none;
+	padding-top: 30px;
+}
+
+menu li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/*nav show*/
+#nav_open {
+	cursor: pointer;
+}
+
+#nav_input:checked ~ #nav_close {
+	display: block;
+	opacity: .5;
+}
+
+#nav_input:checked ~ #nav_content {
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	box-shadow: 0 6px 20px rgba(98, 109, 102, .5);
+	opacity: 1;
+	
+}
+
+/*main image*/
+.main_img img{
+	width: 100%;
+	margin-top: 40px;
+	opacity: 0;
+	animation: fade-in 2.5s linear .6s 1 normal forwards running;
+}
+
+@keyframes fade-in {
+	0% {
+		display: block;
+		opacity: 0;	
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}
+
+
+/*order*/
+.order {
+	width: 60%;
+	margin: 30px auto 0 auto;
+	text-align: center;
+}
+
+.order p {
+	letter-spacing: 5px;
+	font-size: 18px;
+	margin: 10px;
+}
+
+form {
+	position: relative;
+	margin: 60px auto;
+}
+
+/*chocolate*/
+.chocolate {
+	margin-top: 30px;
+	margin-bottom: 50px;
+	padding-top: 30px; 
+	overflow: auto;
+	text-align: center;
+	border-top: 2px solid rgb(38, 24, 9);
+}
+
+.choice {
+	width: 33%;
+	float: left;
+}
+
+.choice img:hover, .choice input:hover {
+	opacity: .8;
+	cursor: pointer;
+}
+
+.choice img {
+	width: 50%;
+	text-align: right;
+}
+
+.choice span {
+	display: block;
+}
+
+/*flavor*/
+.flavor {
+	margin-top: 10px;
+	margin-bottom: 70px;
+	padding-top: 30px; 
+	overflow: auto;
+	text-align: center;
+	border-top: 2px solid rgb(38, 24, 9);
+	position: relative;
+}
+	
+
+.select_box {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 50%;
+	margin-top: 30px;
+	padding: 10px 0 10px 20px;
+	background: rgba(255, 255, 255, .5);
+	border:1px solid rgba(38, 24, 9, .7);
+	font-size: 20px;
+	font-family: 'Bitter', serif;
+}
+
+.select_box:hover {
+	cursor: pointer;
+	opacity: .7;
+} 
+
+
+/*other*/
+.other_massege {
+	margin-top: 10px;
+	margin-bottom: 150px;
+	padding-top: 30px; 
+	overflow: auto;
+	text-align: center;
+ 	border-top: 2px solid rgb(38, 24, 9);
+}
+
+.other {
+	width: 50%;
+	height: 150px;
+	margin-top: 30px;
+	padding: 20px 0 0 20px;
+	font-size: 17px;
+	border: 1px solid rgb(38, 24, 9);
+	border-radius: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*add_cart*/
+.add_cart {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 100px;
+	padding: 10px;
+	font-size: 15px;
+	position: absolute;
+	bottom: -60px;
+	right: 20px;
+	border-radius: 5px;
+}
+
+.add_cart:hover {
+	cursor: pointer;
+	background: rgba(255, 212, 73, .5);
+}
+
+.reset {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 100px;
+	padding: 10px;
+	font-size: 15px;
+	position: absolute;
+	bottom: -60px;
+	right: 150px;
+	border-radius: 5px;
+}
+
+.reset:hover {
+	cursor: pointer;
+	background: rgba(255, 212, 73, .5);
+}
+
+
+/*footer*/
+.footer {
+	background: rgba(117, 106, 96,1);
+	overflow: auto;
+
+}
+
+.footer_inner {
+	padding: 30px 0 40px 20%;
+	overflow: auto;
+}
+
+/*shop_info*/
+.shop_info {
+	width: 50%;
+	float: left;
+}
+
+.concept {
+	width: 60%;
+	margin-top: 40px;
+	padding-bottom: 40px;
+}
+
+.sns_icon {
+ 	padding-top: 50px;
+}
+
+.sns_icon img{
+ 	display: inline-block;
+ 	margin: 0 10px;
+ 	-webkit-transition: .2s ease-in-out;
+ 	transition: .2s ease-in-out;
+}
+
+.sns_icon img:hover {
+  -webkit-transform: scale(1.1) rotate(-15deg);
+  transform: scale(1.1) rotate(-15deg);
+}
+
+/*contact*/
+.shop_info h2, .contact h2 {
+	letter-spacing: 5px;
+}
+
+.contact {
+	width: 50%;
+	float: left;
+}
+
+form {
+	margin-top: 40px;
+}
+
+
+.name {
+	width: 300px;
+	padding: 10px;
+	border: none; 
+	background: rgba(163, 139, 117, .4);
+	border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.email {
+	width: 300px;
+	padding: 10px;
+	border: none;
+	background: rgba(163, 139, 117, .4);
+	border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.massege {
+	width: 300px;
+	height: 200px;
+	padding: 10px;
+	border: none;
+	background: rgba(163, 139, 117, .4);
+	border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.name::placeholder,.email::placeholder,.massege::placeholder {
+	color: #fff;
+	opacity: .8;
+}
+
+.send {
+	width: 300px;
+	padding: 10px;
+	color: background: rgba(163, 139, 117, .4);
+	background: rgba(244, 243, 242, .7);
+	border-radius: 5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.send:hover {
+	cursor: pointer;
+	opacity: .6;
+}
+
+
+/*copylight*/
+.copylight {
+	clear: both;
+	text-align: center;
+}
+
+#go_top {
+	width: 120px;
+	height: 120px;
+	display: block;
+	position: fixed;
+	bottom: 5%;
+	right: 3%;
+	background: #fff;
+	border-radius: 50%;
+	z-index: 900;
+	text-align: center;
+}
+
+#go_top img {
+	width: 70px;
+	margin-top: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
